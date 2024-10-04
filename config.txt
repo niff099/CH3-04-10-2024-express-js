@@ -1,0 +1,28 @@
+1. create directory untuk project nya
+
+// initialisasi node js project nya, install package2 yg digunakan d project nya (npm 'Node Package Manager')
+2. npm init 
+3. npm install express morgan nodemon pg pg-hstore sequelize 
+// npm install nodemon --save-dev
+
+// case ingin menghapus package2
+npm uninstall nama package
+
+// menghapus folder node.js harus di file explorer
+
+// configurasi npm dan DB koneksi
+4. configurasi package.json, spt script dev : nodemon index.js, dll.
+
+// data model dan migration ke database menggunakan sequelize 
+5. sequelize init (tambah npx didepannya) / npm install -g sequelize-cli
+6. configurasi database.js di folder config untuk database connection dari sequelize nya (sequelizerc buat configure settingan sequelize-cli)
+7. sequelize model:generate --name product --attributes name:string,price:float,stock:integer 
+contoh =  
+sequelize model:generate --name transactionDetails --attributes customer_number:string,productId:string,transaction_number:integer,status:string,price:string 
+8. sequelize db:create (kalau database yg kita config blm ada) 
+9. sequelize db:migrate 
+
+// bikin manual folder sesuai MVC = 'Model-View-Controller'
+10. router 
+11. controller
+12. model (kalau gk otomatis ada dari hasil sequelize init)
